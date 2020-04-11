@@ -41,7 +41,7 @@ def readRawImage(update, context):
             texto = texto + i + ' ,' 
         texto = texto[:-2] #removendo a ultima virgula
     else: #texto para se n tiver bot
-        texto = "I couldn't find any bot in this match ????"
+        texto = "I couldn't find any bot in this match 🤔🤔"
     context.bot.send_message(chat_id=update.effective_chat.id, text= texto , reply_to_message_id =update.message.message_id)
     delete(path)
     
