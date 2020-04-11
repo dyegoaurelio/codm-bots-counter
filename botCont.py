@@ -11,12 +11,12 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
 
 #criando os comandos
 def Start(update, context):
-    context.bot.send_message(chat_id=update.effective_chat.id, text="I can count how many bots are on your Call of Duty Mobile match\nJust send me a screenshot of the scoreboard??\nFor additional information simply type /about")
+    context.bot.send_message(chat_id=update.effective_chat.id, text="I can count how many bots are on your Call of Duty Mobile match\nJust send me a screenshot of the scoreboard📸\nFor additional information simply type /about")
 
 def About(update,context):
     context.bot.send_message(chat_id=update.effective_chat.id, text="Maybe you are wondering how do I guess who looks like a bot and who doesnt")
     context.bot.send_message(chat_id=update.effective_chat.id, text="Thats actually not that hard\nUsually bots have the same names, so I gathered information about their names playing many times at Pratice Against AI, so I guess im a snitch Bot")
-    context.bot.send_message(chat_id=update.effective_chat.id, text="If you found someone that I thought was a bot and you disagree let me know at /feedback  ??")
+    context.bot.send_message(chat_id=update.effective_chat.id, text="If you found someone that I thought was a bot and you disagree let me know at /feedback  👍")
     context.bot.send_message(chat_id=update.effective_chat.id, text="If you enjoyed my work you can support me at /donate , I really would appreciate that")
 
 
