@@ -40,7 +40,7 @@ def readRawImage(update, context):
     
     
     try:
-        result = bot_counter(path) #try to recive 2 lists with the botnames by analyzing the downloaded image
+        result = bot_counter(path,update.message.photo[-1].width) #try to recive 2 lists with the botnames by analyzing the downloaded image
         
     except RuntimeError:
         texto = "That definitely insn't a CODM match screenshot😫\nIf you are confused about the usage of this application type /tutorial"
