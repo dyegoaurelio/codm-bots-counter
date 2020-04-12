@@ -48,15 +48,12 @@ def readRawImage(update, context):
         delete(path) #delete the image
     else:
         delete(path) #delete the image if didnt raise error 
-        
         if (len(result[0])+len(result[1]) > 0): #aprendendo o texto, pegando as duas listas
             texto = 'There are at least ' + str(len(result[0])+len(result[1])) + ' bots in this match \n'
-	    texto += 'FORÇAS ESPECIAIS:\n'
-                for i in result[0]:
-                    texto +='- ' + i + '\n'
-	    texto += 'ESQUADRÃO DE GUERRILHA:\n'
-		for i in result[1]:
-		    texto +='- ' + i + '\n'
+            for i in result[0]:
+                texto +='🔵 ' + i + '\n'
+            for i in result[1]:
+                texto +='🔴 ' + i + '\n'
         else: #texto para se n tiver bot
             texto = "I couldn't find any bot in this match 🤔🤔"
     context.bot.send_message(chat_id=update.effective_chat.id, text= texto , reply_to_message_id =update.message.message_id)
