@@ -49,7 +49,7 @@ def readRawImage(update, context):
     else:
         delete(path) #delete the image if didnt raise error 
         if (len(result[0])+len(result[1]) > 0): #aprendendo o texto, pegando as duas listas
-            texto = 'There are at least ' + str(len(result[0])+len(result[1])) + ' bots in this match \n'
+            texto = 'There are at least ' + str(len(result[0])+len(result[1])) + ' bots in this match: \n'
             for i in result[0]:
                 texto +='🔵 ' + i + '\n'
             for i in result[1]:
