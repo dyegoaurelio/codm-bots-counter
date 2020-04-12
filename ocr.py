@@ -15,6 +15,7 @@ def bot_counter(path, width, lista_nomes = ['180Horrific', '1AParquet', '1Trippi
 
   retorno = [] #Lista de retorno
   palavras = texts[0].description.split() #Variável com o texto capturado
+  #Checa se existem 120 ou menos palavras na leitura
   if len(palavras) > 120:
     try:
         raise RuntimeError ('Image input had too many words, thus out of range for this function')
