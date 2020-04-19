@@ -9,6 +9,7 @@ import logging
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                      level=logging.INFO)
 
+
 #criando os comandos
 def Start(update, context):
     context.bot.send_message(chat_id=update.effective_chat.id, text="I can count how many bots are on your Call of Duty Mobile match\nJust send me a screenshot of the scoreboard📸\nFor additional information simply type /about")
@@ -21,7 +22,12 @@ def About(update,context):
     context.bot.send_message(chat_id=update.effective_chat.id, text="If you enjoyed my work you can support me at /donate , I really would appreciate that")
 
 def Tutorial(update,context):
-    pass
+    context.bot.send_message(chat_id=update.effective_chat.id, text="It's really simple to use my services")
+    context.bot.send_message(chat_id=update.effective_chat.id, text="Just send me any screenshot of an in game scoreboard")
+    tutorial_screenshot = context.bot.send_photo(chat_id=update.effective_chat.id, photo= open('stock.jpg', 'rb') , caption = "Like this one").message_id
+    context.bot.send_message(chat_id=update.effective_chat.id, text="Then I'll reply like that :")
+    context.bot.send_message(chat_id=update.effective_chat.id, text="There are at least 6 bots in this match:\n🔵 wreckU\n🔵 Apiodelodo\n🔴 ClamBamFam\n🔴 LILpyro\n🔴 HooRay\n🔴 JamminJerry"    , reply_to_message_id = tutorial_screenshot)
+    
 
 def Donate(update,context):
     pass
