@@ -1,7 +1,8 @@
+googleCredentialsPath = ''
 #Carregamento das bibliotecas
 from google.cloud import vision
 import os
-os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = "CodMCheckBot-712670c4ff95.json"
+os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = googleCredentialsPath
 client = vision.ImageAnnotatorClient()
 
 #dados

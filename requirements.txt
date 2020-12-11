@@ -1,4 +1,4 @@
-google-cloud-vision
+google-cloud-vision==1.0
 
-python-telegram-bot
+python-telegram-bot==13.1
 

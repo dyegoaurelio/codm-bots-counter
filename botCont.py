@@ -1,5 +1,6 @@
+telegramToken = ''
 from telegram.ext import Updater
-updater = Updater(token='924523571:AAENtlPHc8RXYARHVwJLt1J22usmtcVN8yM', use_context=True)
+updater = Updater(token=telegramToken, use_context=True)
 #acessar meu bot
 
 dispatcher = updater.dispatcher
